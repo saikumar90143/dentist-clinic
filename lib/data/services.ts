@@ -1,0 +1,153 @@
+export interface Service {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  icon: string;
+  price: string;
+  duration: string;
+  category: string;
+  features: string[];
+  image: string;
+  popular?: boolean;
+}
+
+export const services: Service[] = [
+  {
+    id: '1',
+    slug: 'dental-implants',
+    title: 'Dental Implants',
+    description: 'Permanent, natural-looking tooth replacements that restore your smile and confidence.',
+    longDescription: 'Dental implants are the gold standard for replacing missing teeth. Our titanium implants integrate seamlessly with your jawbone, providing a stable, long-lasting foundation for crowns, bridges, or dentures.',
+    icon: 'implant',
+    price: '₹25,000 onwards',
+    duration: '60-90 mins',
+    category: 'Restorative',
+    features: ['Titanium implants', 'Bone grafting if needed', 'Custom crown placement', 'Lifetime support'],
+    image: '/images/services/implants.jpg',
+    popular: true,
+  },
+  {
+    id: '2',
+    slug: 'root-canal-treatment',
+    title: 'Root Canal Treatment',
+    description: 'Pain-free procedure to save your natural tooth and eliminate infection.',
+    longDescription: 'Modern root canal treatment is virtually painless with our advanced technology. We use rotary instruments and digital X-rays to precisely remove infected pulp and restore your tooth.',
+    icon: 'root-canal',
+    price: '₹5,000 onwards',
+    duration: '45-60 mins',
+    category: 'Restorative',
+    features: ['Single-session available', 'Digital X-rays', 'Painless procedure', 'Same-day crown'],
+    image: '/images/services/root-canal.jpg',
+  },
+  {
+    id: '3',
+    slug: 'teeth-whitening',
+    title: 'Teeth Whitening',
+    description: 'Professional whitening treatment for a brilliantly bright, dazzling smile.',
+    longDescription: 'Our advanced laser whitening system can brighten your teeth by up to 8 shades in a single session. Safe, effective, and long-lasting results that transform your confidence.',
+    icon: 'whitening',
+    price: '₹8,000 onwards',
+    duration: '60 mins',
+    category: 'Cosmetic',
+    features: ['Up to 8 shades brighter', 'Laser whitening', 'Take-home kit included', 'Sensitivity-free gel'],
+    image: '/images/services/whitening.jpg',
+    popular: true,
+  },
+  {
+    id: '4',
+    slug: 'smile-designing',
+    title: 'Smile Designing',
+    description: 'Transform your entire smile with a customized, comprehensive aesthetic makeover.',
+    longDescription: 'Our smile design process begins with a digital smile preview so you can see your results before treatment. We combine multiple procedures to create your perfect, personalized smile.',
+    icon: 'smile',
+    price: '₹30,000 onwards',
+    duration: 'Multiple sessions',
+    category: 'Cosmetic',
+    features: ['Digital smile preview', 'Personalized plan', 'Multiple treatments', 'HD photos & video'],
+    image: '/images/services/smile-design.jpg',
+    popular: true,
+  },
+  {
+    id: '5',
+    slug: 'invisible-braces',
+    title: 'Invisible Braces',
+    description: 'Straighten your teeth discreetly with comfortable, removable clear aligners.',
+    longDescription: 'Our clear aligner systems offer an almost invisible way to straighten teeth. Comfortable, removable, and highly effective — ideal for professionals and teens alike.',
+    icon: 'braces',
+    price: '₹45,000 onwards',
+    duration: '12-18 months',
+    category: 'Orthodontics',
+    features: ['Custom-fitted aligners', 'Removable for eating', 'Monthly progress tracking', '3D treatment preview'],
+    image: '/images/services/braces.jpg',
+  },
+  {
+    id: '6',
+    slug: 'kids-dentistry',
+    title: "Kids' Dentistry",
+    description: 'Gentle, fun dental care designed specifically for your little ones.',
+    longDescription: 'We make dental visits a positive experience for children with our kid-friendly environment, gentle techniques, and patient approach. We build lifelong healthy habits from an early age.',
+    icon: 'kids',
+    price: '₹500 onwards',
+    duration: '30-45 mins',
+    category: 'Preventive',
+    features: ['Child-friendly environment', 'Painless techniques', 'Fluoride treatments', 'Dental education'],
+    image: '/images/services/kids.jpg',
+  },
+  {
+    id: '7',
+    slug: 'gum-surgery',
+    title: 'Gum Surgery',
+    description: 'Advanced periodontal treatments to restore and maintain healthy gum tissue.',
+    longDescription: 'Our periodontal specialists treat all levels of gum disease, from early gingivitis to advanced periodontitis. We use laser therapy for minimally invasive, faster-healing treatments.',
+    icon: 'gum',
+    price: '₹10,000 onwards',
+    duration: '60-90 mins',
+    category: 'Periodontics',
+    features: ['Laser gum therapy', 'Deep cleaning', 'Gum grafting', 'Pocket reduction'],
+    image: '/images/services/gum.jpg',
+  },
+  {
+    id: '8',
+    slug: 'cosmetic-dentistry',
+    title: 'Cosmetic Dentistry',
+    description: 'Complete range of aesthetic dental procedures to perfect your smile.',
+    longDescription: 'From bonding and contouring to full smile makeovers, our cosmetic dentistry services address every aspect of smile aesthetics with cutting-edge techniques.',
+    icon: 'cosmetic',
+    price: '₹3,000 onwards',
+    duration: 'Varies',
+    category: 'Cosmetic',
+    features: ['Dental bonding', 'Contouring', 'Gum reshaping', 'Complete makeovers'],
+    image: '/images/services/cosmetic.jpg',
+  },
+  {
+    id: '9',
+    slug: 'veneers',
+    title: 'Veneers',
+    description: 'Ultra-thin porcelain shells that create a flawless, celebrity-worthy smile.',
+    longDescription: 'Porcelain veneers are custom-crafted to cover imperfections and create a perfect, natural-looking smile. Our e.max veneers are ultra-thin, requiring minimal tooth reduction.',
+    icon: 'veneer',
+    price: '₹12,000 per tooth',
+    duration: '2 sessions',
+    category: 'Cosmetic',
+    features: ['e.max porcelain', 'Minimal tooth prep', 'Stain-resistant', '15+ year lifespan'],
+    image: '/images/services/veneers.jpg',
+    popular: true,
+  },
+  {
+    id: '10',
+    slug: 'emergency-dentistry',
+    title: 'Emergency Dentistry',
+    description: '24/7 emergency dental care for urgent pain, broken teeth, and dental trauma.',
+    longDescription: 'Dental emergencies don\'t wait for business hours. Our emergency team is available around the clock to provide immediate relief and treatment for all dental emergencies.',
+    icon: 'emergency',
+    price: 'Consultation: Free',
+    duration: 'Immediate',
+    category: 'Emergency',
+    features: ['24/7 availability', 'Same-day appointments', 'Emergency extractions', 'Trauma care'],
+    image: '/images/services/emergency.jpg',
+  },
+];
+
+export const serviceCategories = ['All', 'Cosmetic', 'Restorative', 'Orthodontics', 'Periodontics', 'Preventive', 'Emergency'];

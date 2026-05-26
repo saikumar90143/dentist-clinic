@@ -1,65 +1,103 @@
-import Image from "next/image";
+import type { Metadata } from 'next';
+import HeroSection from '@/components/home/HeroSection';
+import ServicesPreview from '@/components/home/ServicesPreview';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
+import DoctorsPreview from '@/components/home/DoctorsPreview';
+import BeforeAfterSlider from '@/components/home/BeforeAfterSlider';
+import VideoTestimonials from '@/components/home/VideoTestimonials';
+import InsuranceLogos from '@/components/home/InsuranceLogos';
+import EmergencyBanner from '@/components/home/EmergencyBanner';
+import GoogleReviews from '@/components/home/GoogleReviews';
+import FAQAccordion from '@/components/home/FAQAccordion';
+import AppointmentBooking from '@/components/special/AppointmentBooking';
+import LeadCaptureFunnel from '@/components/special/LeadCaptureFunnel';
+import CostEstimator from '@/components/special/CostEstimator';
+import ToothAnatomyViewer from '@/components/special/ToothAnatomyViewer';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'SmileCraft Dental Clinic | Best Dentist in New Delhi — Implants, Smile Design & More',
+  description:
+    'SmileCraft Dental Clinic — Award-winning dental care in Connaught Place, New Delhi. Expert dental implants, smile designing, invisible braces, teeth whitening & emergency care. 15,000+ satisfied patients. Book your free consultation today.',
+  alternates: { canonical: 'https://smilecraftdental.com' },
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <HeroSection />
+      
+      {/* Smart Booking + Lead Funnel */}
+      <section className="section-padding" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #f0fdfa 100%)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-3" style={{ background: '#f0fdfa', color: '#0d9488', border: '1px solid #99f6e4' }}>
+              Smart Booking
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: 'var(--font-playfair)', color: '#0f172a' }}>
+              Book Your Appointment
+            </h2>
+            <p className="mt-3 max-w-2xl mx-auto" style={{ color: '#64748b' }}>
+              Choose your preferred slot instantly, or let us guide you to the right treatment.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <AppointmentBooking />
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#0f172a', fontFamily: 'var(--font-playfair)' }}>
+                🔍 Find Your Perfect Treatment
+              </h3>
+              <p className="text-sm mb-6" style={{ color: '#64748b' }}>Answer 5 quick questions and we&apos;ll recommend the best treatment for you.</p>
+              <LeadCaptureFunnel />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ServicesPreview />
+      <WhyChooseUs />
+      <DoctorsPreview />
+      <BeforeAfterSlider />
+
+      <CostEstimator />
+      <VideoTestimonials />
+      <InsuranceLogos />
+      <EmergencyBanner />
+      <GoogleReviews />
+      <ToothAnatomyViewer />
+      <FAQAccordion />
+
+      {/* Final CTA */}
+      <section className="section-padding" style={{ background: 'linear-gradient(135deg, #0d9488 0%, #3b82f6 100%)' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>
+            Ready for Your Perfect Smile?
+          </h2>
+          <p className="text-lg mb-8 opacity-90">
+            Join 15,000+ happy patients who chose SmileCraft. Your dream smile is one click away.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <a
+              href="/contact"
+              className="px-8 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 hover:scale-105"
+              style={{ background: 'white', color: '#0d9488' }}
+            >
+              📅 Book Free Appointment
+            </a>
+            <a
+              href="https://wa.me/919876543210"
+              className="px-8 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 hover:scale-105"
+              style={{ background: 'rgba(255,255,255,0.15)', border: '2px solid rgba(255,255,255,0.4)', color: 'white' }}
+            >
+              💬 WhatsApp Us Now
+            </a>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 opacity-80 text-sm">
+            {['✓ Free First Consultation', '✓ No Hidden Charges', '✓ 0% EMI Available', '✓ 24/7 Emergency Care'].map((t) => (
+              <span key={t}>{t}</span>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
